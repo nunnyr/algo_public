@@ -37,3 +37,36 @@
         return flag
     }
 }
+
+//################################################################
+class Solution {
+    solve(root, target) {
+        if (root === null) {
+            return false;
+        }
+        if (root.val === target) {
+            return true;
+        }
+        
+        return this.solve(root.left, target) || this.solve(root.right, target)
+    }
+}
+
+//##########################################################################
+
+
+class Solution{
+    solve(root, target){
+        //let flag = false
+        
+        return !root ? false : null
+
+        return root.val === target ?  true : null
+
+        return this.solve(root.left, target) || this.solve(root.right, target)
+
+
+
+    }
+
+}
