@@ -1,12 +1,12 @@
 class Solution {
     solve(shows, durations, k) {
         let hash = {}
+        let sorted 
         let i = 0
         let final = 0 
-        let sorted 
        
-        for(let show of shows){
-            hash[show] ?  hash[show] += durations[i] : hash[show] = durations[i]
+        for(let s of shows){
+            hash[s] ?  hash[s] += durations[i] : hash[s] = durations[i]
             i++
             //console.log("hash", hash)
         }
