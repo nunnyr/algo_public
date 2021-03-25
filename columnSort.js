@@ -17,3 +17,18 @@ class Solution {
         }
     }
 }
+
+
+class Solution {
+    solve(matrix) {
+        let temp = []
+        for (let i = 0; i < matrix[0].length; i++) {
+            temp = matrix.map(x => x[i]).sort((a, b) => a - b)
+            for (let row of matrix) {
+                row[i] = temp[0]
+                temp.shift()
+            }
+        }
+        return matrix
+    }
+}
