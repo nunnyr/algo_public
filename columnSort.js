@@ -17,7 +17,7 @@ class Solution {
         }
     }
 }
-
+//column
 
 class Solution {
     solve(matrix) {
