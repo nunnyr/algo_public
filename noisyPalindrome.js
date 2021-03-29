@@ -3,6 +3,8 @@ class Solution {
 
         let onlyLow = s.match(/[a-z]/g)
         if(!onlyLow) return true //why am i returning true here
+        //if string is empty then return true 
+
         
         let i  = 0
         let back = onlyLow.length - 1
