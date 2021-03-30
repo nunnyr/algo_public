@@ -22,21 +22,20 @@ class Solution {
     }
 }
 
-// class Solution {
-//     solve(matrix) {
-//     const grid = matrix.map(arr => arr.map(cell => 0))
-
-//     for(let i = 0; i < matrix.length; i++){
-//         for(let j = 0; j < matrix.length; j++){
-//             console.log("??", matrix[i][j])
-//             //console.log("grid", grid[i][j])
-//             grid[i][j] = matrix[i][j] + matrix[i][j]
-//            // grid[[j] += matrix[i - 1] + matrix[i]
-            
-            
-//             }
-//         }
-//         console.log("grid", grid)
-//      //   return grid
-//     }
-// }
+class Solution {
+    solve(matrix) {
+        if(matrix.length===0) return []
+        const r = matrix.length, c = matrix[0].length
+        for(let i=0;i<r;i++){
+            for(let j=1;j<c;j++){
+                matrix[i][j]+=matrix[i][j-1]
+            }
+        }
+        for(let j=0;j<c;j++){
+            for(let i=1;i<r;i++){
+                matrix[i][j]+=matrix[i-1][j]
+            }
+        }
+        return matrix
+    }
+}
