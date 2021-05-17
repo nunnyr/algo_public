@@ -25,6 +25,7 @@
               grid[r][c] = grid[r - 1][c] + grid[r][c - 1]
         }
     }
+//sum of neighboring cells, that is the unique path
     return grid[m-1][n-1]
     
     

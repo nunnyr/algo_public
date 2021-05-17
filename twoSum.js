@@ -13,3 +13,18 @@ function twoSum(nums, target){
     }
   }
   
+
+function twoSum(nums, target){
+    const dict = new Map()
+    for(let i=0;i<nums.length;i++){
+      let remainder = target - nums[i]
+      if(dict.has(remainder)){
+         return [dict.get(remainder),i]
+         }
+      dict.set(nums[i],i)
+    }
+  }
+  
+  const nums = [0,0,1,1]
+  console.log(twoSum(nums,2))
+  

@@ -5,6 +5,7 @@ class Solution {
  
         for(let char of a){
             final.push(char)
+
         }
         for(let num of b){
             final.push(num)
